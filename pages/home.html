@@ -1,0 +1,40 @@
+<div class="load" style="display: block;"><div class="portada"></div>
+<div class="perfil">
+    <img src="./assets/img/josea.webp" alt="">
+</div>
+<div class="txt-center mt-3">
+    <span class="titulo txt-bold">Jose A. Rodríguez</span><br>
+    <span class="subtitulo border-bottom" data-section="home" data-value="area">Desarrollador Web</span>
+</div>
+
+<div class="row mt-3">
+    <div class="col-10 col-md-7 info">
+        <span class="txt-bold" data-section="home" data-value="saludo">¡Hola!</span>
+        <p data-section="home" data-value="presentacion">Soy desarrollador Front-End y Back-End, especializado en el área de desarrollo en aplicaciones Web y Móviles. Estudiante de la carrera ING. en Gestión y Desarrollo de Software.</p>
+    </div>
+
+    <div class="mt-5 col-7 mx-auto txt-center">
+        <a class="mx-1" href="https://facebook.com/josee.anggel/" target="_blank"><img src="./assets/icons/fb.png" width="25px" alt="Facebook"></a>
+        <a class="mx-1" href="https://ws.me/526959519345" target="_blank"><img src="./assets/icons/ws.png" width="25px" alt="WhatsApp"></a>
+        <a class="mx-1" href="malito:eljosia.rc@gmail.com"><img src="./assets/icons/email.png" width="25px" alt=""></a>
+    </div>
+</div>
+
+<div class="txt-bold txt-center mt-3">Más sobre mi...</div>
+<div class="row d-flex justify-content-center mb-2" id="menu-home">
+    <a href="#about" class="col-3 my-1 col-sm-1 btn" data-section="menu" data-value="acercade">Sobre Mi</a>
+    <a href="#proyect" class="col-3 my-1 col-sm-1 btn" data-section="menu" data-value="proyectos">Proyectos</a>
+    <a href="#contact" class="col-3 my-1 col-sm-1 btn" data-section="menu" data-value="contacto">Contacto</a>
+</div>
+
+<script>
+    $('#menu-home a').on('click', function(e){
+        e.preventDefault();
+        var pagina = $(this).attr('href').replace('#',"");
+        $('section .load').fadeOut(500)
+        setTimeout(function() {
+            loadPage(pagina);
+        },400)
+    })
+</script>
+<script src="./assets/js/changelang.js"></script></div>

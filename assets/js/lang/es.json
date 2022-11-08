@@ -1,0 +1,24 @@
+{
+    "home": {
+        "area": "Desarrollador Web",
+        "saludo": "¡Hola!",
+        "presentacion": "Soy desarrollador Front-End y Back-End, especializado en el área de desarrollo en aplicaciones Web y Móviles. Estudiante de la carrera ING. en Gestión y Desarrollo de Software."
+    },
+    "menu": {
+        "inicio": "Inicio",
+        "acercade": "Sobre Mi",
+        "proyectos": "Proyectos",
+        "contacto": "Contacto"
+    },
+    "about": {
+        "titulo": "Sobre mi",
+        "info": "Actualmente, tengo 23 años y curso la carrera de ING. en Desarrollo de Software en DECIMO cuatrimestre. Me enfoco en desarrollar aplicaciones web y móviles. <br> He desarrollado proyectos personales, el cual en la mayoría, me encardo de la parte del diseño, en el lado del cliente (Front-End) y la lógica de la aplicación o lado del servidor (Back-End).",
+        "skill": "Mis Habilidades.",
+        "frontend": "Lado del usuario (Front-End)",
+        "backend": "Lado del servidor(Back-End)",
+        "framlib": "Frameworks y Librerias"
+    },
+    "proyects": {
+        "detalleApp1": "A Tu Orden MX is an app of digital menus, the restaurant is registers and generates your digital menu and QR code"
+    }
+}

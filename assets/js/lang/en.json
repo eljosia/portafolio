@@ -1,0 +1,24 @@
+{
+    "home": {
+        "area": "Web Developer",
+        "saludo": "¡Hello!",
+        "presentacion": "I'm Web Front/Back End Developer, specialized in the area of Web and Mobile application development. Student of ING. en Gestión y Desarrollo de Software."
+    },
+    "menu": {
+        "inicio": "Home",
+        "acercade": "About me",
+        "proyectos": "Proyects",
+        "contacto": "Contact"
+    },
+    "about": {
+        "titulo": "About Me",
+        "info": "I am 23 years old and I am in my TENTH semester of ING. en DESARROLLO Y GESTIÓN DE SOFTWARE. I develop web and mobile applications. <br> I have developed personal projects, in which in most of them, I am in charge of the design part, the client side (Front-End) and the application logic or server side (Back-End).",
+        "skill": "My Skills.",
+        "frontend": "Client side(Front-End)",
+        "backend": "Server side(Back-End)",
+        "framlib": "Frameworks and Libraries"
+    },
+    "proyects": {
+        "detalleApp1": "A Tu Orden MX is an app of digital menus, the restaurant is registers and generates your digital menu and QR code"
+    }
+}
