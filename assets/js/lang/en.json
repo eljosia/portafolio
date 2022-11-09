@@ -21,5 +21,8 @@
     "proyect": {
         "titulo": "Proyects",
         "detalleApp1": "A Tu Orden MX is an app of digital menus, the restaurant is registers and generates your digital menu and QR code"
+    },
+    "contact":{
+        "titulo": "Contact"
     }
 }

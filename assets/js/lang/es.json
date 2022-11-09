@@ -21,5 +21,8 @@
     "proyect": {
         "titulo": "Proyectos",
         "detalleApp1": "A Tu Orden MX es una aplicación de menú digital, el restaurant registra su menú y genera un codigo QR con su menú interactivo digital."
+    },
+    "contact":{
+        "titulo": "Contacto"
     }
 }

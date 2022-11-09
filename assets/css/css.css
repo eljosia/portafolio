@@ -170,7 +170,7 @@ section .load {
 
 .contenedor {
     border-radius: 5px;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     margin: 0.5rem;
     background-color: white;
 }
@@ -256,10 +256,8 @@ section .load {
 }
 
 .input-form {
-    padding: 0.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border: none;
+    padding: 1em;
+    border: 1px solid #bdbdbd;
     border-radius: 5px;
     width: 100%;
     font-family: var(--ffprimary);
@@ -280,8 +278,41 @@ section .load {
     width: 250px;
 }
 
+.cont-titulo {
+    font-size: 1.3rem;
+}
+
+#form-contact button {
+    height: 40px;
+    padding: 0.2rem 1rem;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: var(--ffprimary);
+}
+#form-contact button:hover {
+background-color: #101011;
+}
+.contact-info {
+    font-size: 18px;
+}
+.contact-info ul li 
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
 /* SOLO PARA MOVIL (SM) */
 @media (max-width: 767px) {
+    body {
+        font-size: 12px;
+    }
+    .contact-info {
+        font-size: 14px;
+    }
     .navbar a {
         width: 25%;
         margin-left: 5px;
@@ -307,6 +338,7 @@ section .load {
     justify-content: space-evenly;
 
 }
+
 .txt-xs {
     font-size: 0.6rem;
 }
@@ -316,6 +348,7 @@ section .load {
     font-family: 'Skill_icon';
     src: url("../skill-icon.ttf") format("truetype");
 }
+
 .icon {
     margin-right: 5px;
     font-family: "Skill_icon";

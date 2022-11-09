@@ -1,0 +1,59 @@
+<div class="cont">
+    <div class="navbar d-flex align-items-center" id="menu"></div>
+
+    <div class="txt-center my-3">
+        <span class="titulo txt-bold" data-section="contact" data-value="titulo">Contacto</span>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-10">
+
+            <div class="contenedor p-4 row">
+
+                <div class="col-12 col-sm-6">
+                    <span class="txt-bold border-bottom cont-titulo">Mandame un mensaje</span>
+                    <span></span>
+                    <form action="#" method="post" id="form-contact" class="mt-4">
+                        <div class="d-flex justify-content-between align-items-center my-2">
+                            <input type="text" class="input-form me-1" placeholder="Nombre*" id="nombre">
+                            <input type="email" class="input-form ms-1" placeholder="Email*" id="email">
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center my-2">
+                            <input type="text" class="input-form" placeholder="Nombre de la compañía" id="company">
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center my-2">
+                            <textarea id="mensaje" rows="5" class="input-form" placeholder="Mensaje*"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>Lo campos con un (*) son obligatorios.</span>
+                            <button type="submit">
+                                <i class="bi bi-send"></i>
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-12 col-sm-6 d-flex align-items-center">
+                    <div class="contact-info p-sm-5 pt-4 pt-sm-0">
+                        También puedes contactarme de las siguientes formas:
+                        <ul>
+                            <li class="txt-bold"><i class="fa-light fa-envelope-dot me-1"></i> contacto@joseangelrc.com</li>
+                            <li><i class="fa-light fa-phone me-1"></i> +52 1 (695) 951 9345</li>
+                            <li><i class="fa-light fa-location-dot me-1"></i> Escuinapa, Sinaloa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        loadMenu("contact");
+        $('.load').height("auto"); $('#footer').show()
+    </script>
+</div>
+<script src="./assets/js/scripts.js"></script>
+<script src="./assets/js/changelang.js"></script>

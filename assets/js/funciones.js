@@ -1,7 +1,7 @@
 function loadMenu(activo) {
     $.ajax({
         type: "GET",
-        url: `./includes/menu.html`,
+        url: `./includes/menu.html?v=2`,
         data: {},
         success: function (data) {
             $("#menu").html(data);
