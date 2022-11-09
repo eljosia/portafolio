@@ -8,3 +8,11 @@ $('#menu a').on('click', function (e) {
         }, 400)
     }
 })
+
+$('#my-cv').on('click', function (e) {
+    e.preventDefault();
+    $('section .load').fadeOut(500)
+    setTimeout(function () {
+        loadpage("cv");
+    }, 400)
+})

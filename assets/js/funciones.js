@@ -12,12 +12,7 @@ function loadMenu(activo) {
 }
 function loadpage(pagina) {
     $('section .load').load(`./pages/${pagina}.html`).fadeIn(400);
-    // $.ajax({
-    //     type: "GET",
-    //     url: `./pages/${pagina}.html`,
-    //     data: {},
-    //     success: function (data) {
-    //         $('section .load').html(data).fadeIn(400);
-    //     }
-    // })
+}
+function loadFooter(){
+    $('#footer').load(`./includes/footer.html`)
 }

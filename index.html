@@ -19,42 +19,18 @@
         <div class="load">
 
         </div>
-        <div class="mt-2 d-flex justify-content-center p-3" id="idioma">
-            <a href="#es" class="d-flex align-items-center me-1 btn-lang" data-language="es"><img
-                    src="./assets/icons/es.png" width="20px" alt=""> Español</a>
-            <a href="#en" class="d-flex align-items-center ms-1 btn-lang" data-language="en"><img
-                    src="./assets/icons/en.png" width="20px" alt=""> English</a>
-        </div>
-
-        <div class="footer">
-            <div class="txt-center f-small mt-auto credito">
-                <div class="mt-5 col-7 mx-auto txt-center">
-                    <a class="mx-1" href="https://facebook.com/josee.anggel/" target="_blank"><img
-                            src="./assets/icons/fb.png" width="25px" alt="Facebook"></a>
-                    <a class="mx-1" href="https://ws.me/526959519345" target="_blank"><img src="./assets/icons/ws.png"
-                            width="25px" alt="WhatsApp"></a>
-                    <a class="mx-1" href="malito:eljosia.rc@gmail.com"><img src="./assets/icons/email.png" width="25px"
-                            alt=""></a>
-                </div>
-
-                <div class="txt-center f-small mt-auto credito"></div>
-            </div>
-        </div>
+        <div id="footer"></div>
     </section>
-
-    <!-- <script src="./assets/js/changelang.js"></script> -->
+    
     <!-- JS -->
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/funciones.js"></script>
     <script src="./assets/js/changelang.js"></script>
     <script>
         $(document).ready(function () {
-            loadpage("proyect");
+            loadpage("home");
+            loadFooter();
         })
-        
-        var y = new Date().getFullYear();
-        var credito = `© ${y} - José Ángel Rodríguez Corona`;
-        $('.credito').html(credito);
     </script>
 
 </body>

@@ -162,9 +162,8 @@ section .load {
 }
 
 .cth li {
+    margin: 0.8rem 0 0 0.8rem;
     list-style: none;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     display: flex;
     align-items: center;
 }
@@ -267,6 +266,7 @@ section .load {
 }
 
 .btn-lang {
+    margin: 0 0.5rem 0.5rem 0;
     text-decoration: none;
     color: var(--dark);
 }
@@ -299,60 +299,77 @@ section .load {
     }
 }
 
+.social-link {
+    text-decoration: none;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.txt-xs {
+    font-size: 0.6rem;
+}
+
 /* ICONOS */
+@font-face {
+    font-family: 'Skill_icon';
+    src: url("../skill-icon.ttf") format("truetype");
+}
 .icon {
     margin-right: 5px;
-    padding-top: 5px;
+    font-family: "Skill_icon";
+    font-size: 0.8rem;
 }
 
 .j-html5:before {
-    content: url('../icons/html5.png')
+    content: "A";
 }
 
 .j-css3:before {
-    content: url('../icons/css3.png')
+    content: "B"
 }
 
 .j-js:before {
-    content: url('../icons/js.png')
+    content: "C"
 }
 
 .j-jquery:before {
-    content: url('../icons/jquery.png')
+    content: "D"
 }
 
 .j-php:before {
-    content: url('../icons/php.png')
+    content: "E"
 }
 
 .j-mysql:before {
-    content: url('../icons/mysql.png')
+    content: "F"
 }
 
 .j-node:before {
-    content: url('../icons/node.png')
+    content: 'G'
 }
 
 .j-lua:before {
-    content: url('../icons/lua.png')
+    content: 'H'
 }
 
 .j-laravel:before {
-    content: url('../icons/lua.png')
+    content: 'I'
 }
 
 .j-react:before {
-    content: url('../icons/react.png')
+    content: 'J'
 }
 
 .j-wp:before {
-    content: url('../icons/wp.png')
+    content: 'M'
 }
 
 .j-bootstrap:before {
-    content: url('../icons/bootstrap.png')
+    content: 'N'
 }
 
 .j-sweetalert:before {
-    content: url('../icons/sweetalert.png')
+    content: 'O'
 }
