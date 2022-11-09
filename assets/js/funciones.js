@@ -6,6 +6,7 @@ function loadMenu(activo) {
         success: function (data) {
             $("#menu").html(data);
             $(`#menu .${activo}`).addClass("active");
+            $(`#menu .${activo}`).removeAttr('href');
         }
     })
 }
