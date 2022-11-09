@@ -12,7 +12,7 @@
     },
     "about": {
         "titulo": "About Me",
-        "info": "I am 23 years old and I am in my TENTH semester of ING. en DESARROLLO Y GESTIÓN DE SOFTWARE. I develop web and mobile applications. <br> I have developed personal projects, in which in most of them, I am in charge of the design part, the client side (Front-End) and the application logic or server side (Back-End).",
+        "info": "I am 23 years old and I am in my TENTH semester of ING. en DESARROLLO Y GESTIÓN DE SOFTWARE. I develop web and mobile applications. <br> I have developed personal projects, in most of them, I am in charge of the design part, the client side (Front-End) and the application logic or server side (Back-End).",
         "skill": "My Skills.",
         "frontend": "Client side(Front-End)",
         "backend": "Server side(Back-End)",

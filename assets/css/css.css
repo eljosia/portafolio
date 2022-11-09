@@ -170,7 +170,7 @@ section .load {
 
 .contenedor {
     border-radius: 5px;
-    box-shadow: #28262C;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     margin: 0.5rem;
     background-color: white;
 }
