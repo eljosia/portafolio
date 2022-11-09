@@ -1,13 +1,6 @@
 <div class="cont">
     <div class="navbar d-flex align-items-center" id="menu">
-        <a href="#home">
-            <i class="bi bi-house"></i><br>
-            <span data-section="menu" data-value="inicio">Inicio</span>
-        </a>
-        <a class="active">
-            <i class="bi bi-person-bounding-box"></i><br>
-            <span data-section="menu" data-value="acercade">Sobre mi</span>
-        </a>
+
     </div>
 
     <div class="txt-center mt-3">
@@ -28,12 +21,13 @@
                 </a>
             </p>
         </div>
-        <div class="txt-center subtitulo txt-bold mt-5">Mis Habilidades</div>
+        <div class="txt-center subtitulo txt-bold mt-5" data-section="about" data-value="skill">Mis Habilidades</div>
 
         <div class="col-12 col-4 row d-flex justify-content-center">
             <div class="col-6 col-md-3 d-flex justify-content-center">
                 <ul class="cth">
-                    <span class="txt-bold border-bottom">Lado del Usuario (Front-End)</span>
+                    <span class="txt-bold border-bottom" data-section="about" data-value="frontend">Lado del Usuario
+                        (Front-End)</span>
                     <li><i class="icon j-html5"></i>HTML5</li>
                     <li><i class="icon j-css3"></i>CSS3</li>
                     <li><i class="icon j-js"></i>JavaScript</li>
@@ -43,7 +37,8 @@
 
             <div class="col-6 col-md-3 d-flex justify-content-center">
                 <ul class="cth">
-                    <span class="txt-bold border-bottom">Lado del Servidor (Front-End)</span>
+                    <span class="txt-bold border-bottom" data-section="about" data-value="backend">Lado del Servidor
+                        (Front-End)</span>
                     <li><i class="icon j-php"></i>PHP 7.0</li>
                     <li><i class="icon j-mysql"></i>MySQL</li>
                     <li><i class="icon j-node"></i>Node.JS</li>
@@ -53,7 +48,8 @@
 
             <div class="col-6 col-md-3 d-flex justify-content-center">
                 <ul class="cth">
-                    <span class="txt-bold border-bottom">Frameworks y Librerías</span>
+                    <span class="txt-bold border-bottom" data-section="about" data-value="framlib">Frameworks y
+                        Librerías</span>
                     <li><i class="icon j-laravel"></i>Laravel</li>
                     <li><i class="icon j-react"></i>React</li>
                     <li><i class="icon j-wp"></i>CMS: WordPress</li>
@@ -63,6 +59,9 @@
             </div>
         </div>
     </div>
+    <script>
+        loadMenu("about");
+    </script>
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/changelang.js"></script>
 </div>
-<script src="./assets/js/scripts.js"></script>
-<script src="./assets/js/changelang.js"></script></div>

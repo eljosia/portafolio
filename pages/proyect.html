@@ -1,68 +1,44 @@
 <div class="cont">
-    <div class="navbar d-flex align-items-center" id="menu">
-        <a href="#home">
-            <i class="bi bi-house"></i><br>
-            <span data-section="menu" data-value="inicio">Inicio</span>
-        </a>
-        <a class="active">
-            <i class="bi bi-person-bounding-box"></i><br>
-            <span data-section="menu" data-value="acercade">Sobre mi</span>
-        </a>
-    </div>
+    <div class="navbar d-flex align-items-center" id="menu"></div>
 
-    <div class="txt-center mt-3">
-        <span class="titulo txt-bold" data-section="about" data-value="titulo">Sobre mi</span>
+    <div class="txt-center my-3">
+        <span class="titulo txt-bold" data-section="proyect" data-value="titulo">Proyectos</span>
     </div>
 
     <div class="row d-flex justify-content-center">
-        <div class="col-10 col-md-7">
-            <p data-section="about" data-value="info" class="info">
-                Actualmente, tengo 23 años y curso la carrera de ING. en Desarrollo de Software en DECIMO cuatrimestre.
-                Me enfoco en desarrollar aplicaciones web y móviles. <br> He desarrollado proyectos personales, el cual
-                en la mayoría, me encardo de la parte del diseño, en el lado del cliente (Front-End) y la lógica de la
-                aplicación o lado del servidor (Back-End).
-            </p>
-            <p>
-                <a href="cv.html" class="d-flex justify-content-center btn btn-cv mx-auto">
-                    <i class="bi bi-filetype-pdf me-2"></i> Mi CV
-                </a>
-            </p>
-        </div>
-        <div class="txt-center subtitulo txt-bold mt-5">Mis Habilidades</div>
+        <div class="col-12 col-md-10">
 
-        <div class="col-12 col-4 row d-flex justify-content-center">
-            <div class="col-6 col-md-3 d-flex justify-content-center">
-                <ul class="cth">
-                    <span class="txt-bold border-bottom">Lado del Usuario (Front-End)</span>
-                    <li><i class="icon j-html5"></i>HTML5</li>
-                    <li><i class="icon j-css3"></i>CSS3</li>
-                    <li><i class="icon j-js"></i>JavaScript</li>
-                    <li><i class="icon j-jquery"></i>JQuery</li>
-                </ul>
+            <div class="contenedor p-5 row">
+                
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <div class="cover">
+                            <img src="./assets/img/atuorden.png" alt="">
+                        </div>
+                        <div class="body txt-center mt-1">
+                            <span class="titulo">A Tu Orden MX</span>
+                            <p data-section="proyect" data-value="detalleApp1">
+                                A Tu Orden MX is an app of digital menus, the restaurant is registers and generates your digital menu and QR code.
+                            </p>
+
+                            <div class="buttons">
+                                <a href="https://atuorden.mx" target="_blank" class="btn">
+                                    <i class="bi bi-eye me-1"></i>
+                                    Preview
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
 
-            <div class="col-6 col-md-3 d-flex justify-content-center">
-                <ul class="cth">
-                    <span class="txt-bold border-bottom">Lado del Servidor (Front-End)</span>
-                    <li><i class="icon j-php"></i>PHP 7.0</li>
-                    <li><i class="icon j-mysql"></i>MySQL</li>
-                    <li><i class="icon j-node"></i>Node.JS</li>
-                    <li><i class="icon j-lua"></i>LUA</li>
-                </ul>
-            </div>
-
-            <div class="col-6 col-md-3 d-flex justify-content-center">
-                <ul class="cth">
-                    <span class="txt-bold border-bottom">Frameworks y Librerías</span>
-                    <li><i class="icon j-laravel"></i>Laravel</li>
-                    <li><i class="icon j-react"></i>React</li>
-                    <li><i class="icon j-wp"></i>CMS: WordPress</li>
-                    <li><i class="icon j-bootstrap"></i>Bootstrap</li>
-                    <li><i class="icon j-sweetalert"></i>SweetAlert</li>
-                </ul>
-            </div>
         </div>
     </div>
+    <script>
+        loadMenu("proyect");
+    </script>
 </div>
 <script src="./assets/js/scripts.js"></script>
-<script src="./assets/js/changelang.js"></script></div>
+<script src="./assets/js/changelang.js"></script>

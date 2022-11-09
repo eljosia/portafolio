@@ -158,17 +158,20 @@ section .load {
     align-items: center;
 }
 
-.card {
-    border-radius: 10px;
+.contenedor {
+    border-radius: 5px;
     box-shadow: #28262C;
     margin: 0.5rem;
     background-color: white;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
-    transition: transform .5s ease;
 }
 
-.card:hover {
-    /* transform: translateY(-10px); */
+.card {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    /* box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important; */
+    transition: transform .5s ease;
+    height: 25rem;
+    max-height: 25rem;
 }
 
 .card .cover {
@@ -180,8 +183,8 @@ section .load {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     transition: transform .5s ease;
 }
 
@@ -197,6 +200,11 @@ section .load {
 
 .card .body p {
     font-size: 0.9rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
 }
 
 .card .body .titulo {
@@ -211,16 +219,16 @@ section .load {
 .card .body .buttons {
     display: flex;
     justify-content: space-between;
+    bottom: 0;
 }
 
 .card .body .buttons a {
-    width: 40%;
     display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 0.3rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid var(--dark);
     border-radius: 5px;
     margin-top: 0.5rem;
@@ -255,6 +263,7 @@ section .load {
 .tags {
     font-size: 0.7rem;
 }
+
 .btn-cv {
     margin-top: 1.5rem;
     width: 250px;
@@ -280,17 +289,59 @@ section .load {
 }
 
 /* ICONOS */
-.icon {margin-right: 5px;padding-top: 5px;}
-.j-html5:before {content: url('../icons/html5.png')}
-.j-css3:before {content: url('../icons/css3.png')}
-.j-js:before {content: url('../icons/js.png')}
-.j-jquery:before {content: url('../icons/jquery.png')}
-.j-php:before {content: url('../icons/php.png')}
-.j-mysql:before {content: url('../icons/mysql.png')}
-.j-node:before {content: url('../icons/node.png')}
-.j-lua:before {content: url('../icons/lua.png')}
-.j-laravel:before {content: url('../icons/lua.png')}
-.j-react:before {content: url('../icons/react.png')}
-.j-wp:before {content: url('../icons/wp.png')}
-.j-bootstrap:before {content: url('../icons/bootstrap.png')}
-.j-sweetalert:before {content: url('../icons/sweetalert.png')}
+.icon {
+    margin-right: 5px;
+    padding-top: 5px;
+}
+
+.j-html5:before {
+    content: url('../icons/html5.png')
+}
+
+.j-css3:before {
+    content: url('../icons/css3.png')
+}
+
+.j-js:before {
+    content: url('../icons/js.png')
+}
+
+.j-jquery:before {
+    content: url('../icons/jquery.png')
+}
+
+.j-php:before {
+    content: url('../icons/php.png')
+}
+
+.j-mysql:before {
+    content: url('../icons/mysql.png')
+}
+
+.j-node:before {
+    content: url('../icons/node.png')
+}
+
+.j-lua:before {
+    content: url('../icons/lua.png')
+}
+
+.j-laravel:before {
+    content: url('../icons/lua.png')
+}
+
+.j-react:before {
+    content: url('../icons/react.png')
+}
+
+.j-wp:before {
+    content: url('../icons/wp.png')
+}
+
+.j-bootstrap:before {
+    content: url('../icons/bootstrap.png')
+}
+
+.j-sweetalert:before {
+    content: url('../icons/sweetalert.png')
+}

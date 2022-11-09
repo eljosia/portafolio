@@ -45,21 +45,11 @@
     <!-- <script src="./assets/js/changelang.js"></script> -->
     <!-- JS -->
     <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/funciones.js"></script>
+    <script src="./assets/js/changelang.js"></script>
     <script>
-        function loadpage(pagina)
-        {
-            $.ajax({
-                type: "GET",
-                url: `./pages/${pagina}.html`,
-                data: {},
-                success: function (data) {
-                    $('section .load').html(data).fadeIn(400);
-                }
-            })
-        }
-
         $(document).ready(function () {
-            loadpage("home");
+            loadpage("proyect");
         })
         
         var y = new Date().getFullYear();

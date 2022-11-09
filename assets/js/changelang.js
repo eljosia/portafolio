@@ -16,8 +16,9 @@ $('#idioma a').on('click', function () {
     cambiarlengua($(this).attr('data-language'))
 })
 
-if (window.location.hash) {
+if (window.location.hash && window.location.hash == "#es" || window.location.hash == "#en") {
     cambiarlengua(window.location.hash.replace("#", ""))
 } else {
+    history.replaceState(null, document.title, location.pathname + location.search)
     cambiarlengua("es");
 }

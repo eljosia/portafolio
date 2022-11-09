@@ -18,7 +18,8 @@
         "backend": "Lado del servidor(Back-End)",
         "framlib": "Frameworks y Librerias"
     },
-    "proyects": {
-        "detalleApp1": "A Tu Orden MX is an app of digital menus, the restaurant is registers and generates your digital menu and QR code"
+    "proyect": {
+        "titulo": "Proyectos",
+        "detalleApp1": "A Tu Orden MX es una aplicación de menú digital, el restaurant registra su menú y genera un codigo QR con su menú interactivo digital."
     }
 }
