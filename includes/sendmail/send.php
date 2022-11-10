@@ -30,7 +30,7 @@ try {
     $mail->isHTML(true);
     $mail->CharSet = 'UTF-8';
     $mail->Subject = $_POST['asunto'];
-    $mail->Body    = $_POST['msg'];
+    $mail->Body    = $_POST['msg'] . "<br><br> Enviado desde: <a href='http://joseangelrc.com/' target='_blank'>Portafolio Web</a>";
 
     $mail->send();
     
