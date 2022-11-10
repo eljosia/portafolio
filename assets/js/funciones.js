@@ -16,3 +16,20 @@ function loadpage(pagina) {
 function loadFooter(){
     $('#footer').load(`./includes/footer.html`)
 }
+function loadProyect()
+{
+    var div  = "#load-proyects"
+    var dir  = "./includes/proyects"
+    
+    $.ajax({
+        url: "./includes/scan.php",
+        dataType: 'json',
+        success: function(data) {
+         $.each(data, function(i){
+            $.get(`${dir}/${data[i]}`, function(codigo){
+                $(div).append(codigo);
+            });
+         });
+        }
+       });
+}
