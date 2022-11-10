@@ -8,7 +8,7 @@
     <div class="row d-flex justify-content-center">
         <div class="col-10">
 
-            <div class="contenedor p-4 row">
+            <div class="contenedor p-4 row pb-5">
 
                 <div class="col-12 col-sm-6">
                     <span class="txt-bold border-bottom cont-titulo">Mandame un mensaje</span>
@@ -16,22 +16,27 @@
                     <form action="#" method="post" id="form-contact" class="mt-4">
                         <div class="d-flex justify-content-between align-items-center my-2">
                             <input type="text" class="input-form me-1" placeholder="Nombre*" id="nombre">
-                            <input type="email" class="input-form ms-1" placeholder="Email*" id="email">
+                            <input type="email" class="input-form ms-1" placeholder="Email*" id="email" required>
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center my-2">
-                            <input type="text" class="input-form" placeholder="Nombre de la compañía" id="company">
+                            <input type="text" class="input-form" placeholder="Asunto*" id="asunto" required>
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center my-2">
-                            <textarea id="mensaje" rows="5" class="input-form" placeholder="Mensaje*"></textarea>
+                            <textarea id="mensaje" rows="5" class="input-form" placeholder="Mensaje*"
+                                required></textarea>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <span>Lo campos con un (*) son obligatorios.</span>
-                            <button type="submit">
+                            <button type="submit" id="btn-send">
                                 <i class="bi bi-send"></i>
                                 Enviar
                             </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-sm-3">
+                            <div id="alerta">
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -40,7 +45,8 @@
                     <div class="contact-info p-sm-5 pt-4 pt-sm-0">
                         También puedes contactarme de las siguientes formas:
                         <ul>
-                            <li class="txt-bold"><i class="fa-light fa-envelope-dot me-1"></i> contacto@joseangelrc.com</li>
+                            <li class="txt-bold"><i class="fa-light fa-envelope-dot me-1"></i> contacto@joseangelrc.com
+                            </li>
                             <li><i class="fa-light fa-phone me-1"></i> +52 1 (695) 951 9345</li>
                             <li><i class="fa-light fa-location-dot me-1"></i> Escuinapa, Sinaloa</li>
                         </ul>
@@ -53,6 +59,59 @@
     <script>
         loadMenu("contact");
         $('.load').height("auto"); $('#footer').show()
+    </script>
+
+    <script>
+        $('#form-contact').on('submit', function (e) {
+            e.preventDefault();
+
+            var nombre = $('#nombre').val();
+            var asunto = $('#asunto').val();
+            var email = $('#email').val();
+            var msg = $('#mensaje').val();
+            var lang = "es";
+
+
+            //Obtenemos el lenguage
+            if (window.location.hash && window.location.hash == "#en") {
+                lang = "en"
+            }
+
+            if (nombre == "" || asunto == "" || email == "" || msg == "") {
+                if (lang == "es") {
+                    $('#alerta').html(`<div class="error"><i class="fa-light fa-circle-exclamation"></i> Revisa que los campos no estén vacios</div>`)
+                } else {
+                    $('#alerta').html(`<div class="error"><i class="fa-light fa-circle-exclamation"></i> Verify that the fields are not empty.</div>`)
+                }
+            } else {
+                $('#btn-send').prop('disabled', true).html('<i class="fa-light fa-paper-plane-top fa-beat-fade"></i> Enviando');
+
+                var datos = new FormData();
+                datos.append('nombre', nombre);
+                datos.append('asunto', asunto);
+                datos.append('email', email);
+                datos.append('msg', msg);
+                datos.append('lang', lang)
+
+                fetch('./includes/sendmail/send.php', {
+                    method: 'POST',
+                    body: datos
+                }).then(response => response.json())
+                    .then(function (res) {
+                        $('#alerta').html(`<div class="${res.tipo}"><i class="bi bi-envelope-check"></i> ${res.msg}</div>`).fadeIn(300);
+                        setTimeout(function () {
+                            $(`#alerta ${res.tipo}`).fadeOut(300)
+                        }, 2000);
+
+                        $('#btn-send').prop('disabled', false).html('<i class="bi bi-send"></i> Enviar');
+
+                        if (res.tipo === "success") {
+                            $('#form-contact')[0].reset();
+                        }
+
+                    })
+            }
+        })
     </script>
 </div>
 <script src="./assets/js/scripts.js"></script>

@@ -292,17 +292,47 @@ section .load {
     color: var(--light);
     font-size: var(--ffprimary);
 }
+
 #form-contact button:hover {
-background-color: #101011;
+    background-color: #101011;
 }
+
 .contact-info {
     font-size: 18px;
 }
-.contact-info ul li 
-{
+
+.contact-info ul {
+    padding: 0;
+}
+
+.contact-info ul li {
     list-style: none;
     display: flex;
     align-items: center;
+}
+
+#alerta {
+    width: 100%;
+}
+
+#alerta .success {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #123c00;
+    background-color: #79ffae54;
+}
+
+#alerta .error {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #3c0000;
+    background-color: #ff797954;
 }
 
 /* SOLO PARA MOVIL (SM) */
@@ -310,9 +340,11 @@ background-color: #101011;
     body {
         font-size: 12px;
     }
+
     .contact-info {
         font-size: 14px;
     }
+
     .navbar a {
         width: 25%;
         margin-left: 5px;
