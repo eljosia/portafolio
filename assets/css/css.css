@@ -121,6 +121,7 @@ body {
 }
 
 section {
+    position: relative;
     height: 100vh;
 }
 
@@ -176,12 +177,11 @@ section .load {
 }
 
 .card {
+    height: 100%;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, .25);
-    /* box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important; */
+    /* border: 1px solid rgba(0, 0, 0, .25); */
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .095) !important;
     transition: transform .5s ease;
-    height: 25rem;
-    max-height: 25rem;
 }
 
 .card .cover {
@@ -210,11 +210,6 @@ section .load {
 
 .card .body p {
     font-size: 0.9rem;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
 }
 
 .card .body .titulo {
@@ -226,19 +221,16 @@ section .load {
     padding-bottom: 0.5rem;
 }
 
-.card .body .buttons {
+.card .buttons {
     display: flex;
-    justify-content: space-between;
-    bottom: 0;
+    justify-content: center;
 }
 
-.card .body .buttons a {
+.card .buttons a {
     display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 0.3rem;
-    margin-left: auto;
-    margin-right: auto;
     border: 1px solid var(--dark);
     border-radius: 5px;
     margin-top: 0.5rem;
@@ -335,6 +327,19 @@ section .load {
     background-color: #ff797954;
 }
 
+#footer {
+    bottom: 0;
+    margin: 0 auto 0 auto;
+    left: 40%;
+    right: 40%;
+}
+
+@media (min-height: 781px) {
+    #footer {
+        position: absolute;
+    }
+}
+
 /* SOLO PARA MOVIL (SM) */
 @media (max-width: 767px) {
     body {
@@ -374,6 +379,8 @@ section .load {
 .txt-xs {
     font-size: 0.6rem;
 }
+
+
 
 /* ICONOS */
 @font-face {
@@ -437,4 +444,9 @@ section .load {
 
 .j-sweetalert:before {
     content: 'O'
+}
+
+/* MODAL */
+.hidden {
+    display: none;
 }

@@ -2,7 +2,7 @@
     "home": {
         "area": "Web Developer",
         "saludo": "¡Hello!",
-        "presentacion": "I'm Web Front/Back End Developer, specialized in the area of Web and Mobile application development. Student of ING. en Gestión y Desarrollo de Software."
+        "presentacion": "I'm a Web Front/Back End Developer, specialized in the area of Web and Mobile application development. Student of ING. en Gestión y Desarrollo de Software."
     },
     "menu": {
         "inicio": "Home",
@@ -20,7 +20,9 @@
     },
     "proyect": {
         "titulo": "Proyects",
-        "detalleApp1": "A Tu Orden MX is an app of digital menus, the restaurant is registers and generates your digital menu and QR code"
+        "galeria": "Gallery",
+        "detalleApp1": "A Tu Orden MX is an app of digital menus, the restaurant registers and generates your digital menu and QR code",
+        "detalleApp2": "Chesflix is an Web App of user managment encargado de organizar el pago de cada cliente, el cliente vencido se le notifica por WhatsApp."
     },
     "contact":{
         "titulo": "Contact"
