@@ -25,6 +25,15 @@
         "detalleApp2": "Chesflix is an Web App of user managment that organizes costumer payment, the expired customer is notified by WhatsApp."
     },
     "contact":{
-        "titulo": "Contact"
+        "titulo": "Contact",
+        "subtitulo": "Send me a message",
+        "infoForm": "Fields marked with an (*) are required.",
+        "btnSend": "Send",
+        "moreInfo": "You can also contact me in the following ways:"
+    },
+    "contactInputs":{
+        "name-email":"<input type='text' class='input-form me-1' placeholder='Name*' id='nombre' required><input type='email' class='input-form ms-1' placeholder='Email*' id='email' required>",
+        "asunto": "<input type='text' class='input-form' placeholder='Subject*' id='asunto' required>",
+        "textarea": "<textarea id='mensaje' rows='5' class='input-form' placeholder='Message*' required></textarea>"
     }
 }

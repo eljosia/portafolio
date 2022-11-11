@@ -11,27 +11,26 @@
             <div class="contenedor p-4 row pb-5">
 
                 <div class="col-12 col-sm-6">
-                    <span class="txt-bold border-bottom cont-titulo">Mandame un mensaje</span>
+                    <span class="txt-bold border-bottom cont-titulo" data-section="contact" data-value="subtitulo">Mándame un mensaje</span>
                     <span></span>
                     <form action="#" method="post" id="form-contact" class="mt-4">
-                        <div class="d-flex justify-content-between align-items-center my-2">
-                            <input type="text" class="input-form me-1" placeholder="Nombre*" id="nombre">
-                            <input type="email" class="input-form ms-1" placeholder="Email*" id="email" required>
+                        <div class="d-flex justify-content-between align-items-center my-2" data-section="contactInputs" data-value="name-email">
+                            <input type="text" class="input-form me-1" placeholder="Nombre*" id="nombre" required><input type="email" class="input-form ms-1" placeholder="Email*" id="email" required>
+                            
                         </div>
 
-                        <div class="d-flex justify-content-between align-items-center my-2">
-                            <input type="text" class="input-form" placeholder="Asunto*" id="asunto" required>
+                        <div class="d-flex justify-content-between align-items-center my-2" data-section="contactInputs" data-value="asunto">
+                            <input type='text' class='input-form' placeholder='Asunto*' id='asunto' required>
                         </div>
 
-                        <div class="d-flex justify-content-between align-items-center my-2">
-                            <textarea id="mensaje" rows="5" class="input-form" placeholder="Mensaje*"
-                                required></textarea>
+                        <div class="d-flex justify-content-between align-items-center my-2" data-section="contactInputs" data-value="textarea">
+                            <textarea id="mensaje" rows="5" class="input-form" placeholder="Mensaje*" required></textarea>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span>Lo campos con un (*) son obligatorios.</span>
+                            <span data-section="contact" data-value="infoForm">Los campos con un (*) son obligatorios.</span>
                             <button type="submit" id="btn-send">
                                 <i class="bi bi-send"></i>
-                                Enviar
+                                <span data-section="contact" data-value="btnSend">Enviar</span>
                             </button>
                         </div>
                         <div class="d-flex justify-content-between align-items-center pt-sm-3">
@@ -43,7 +42,7 @@
 
                 <div class="col-12 col-sm-6 d-flex align-items-center">
                     <div class="contact-info p-sm-5 pt-4 pt-sm-0">
-                        También puedes contactarme de las siguientes formas:
+                        <span data-section="contact" data-value="moreInfo">También puedes contactarme de las siguientes formas:</span>
                         <ul>
                             <li class="txt-bold"><i class="fa-light fa-envelope-dot me-1"></i> contacto@joseangelrc.com
                             </li>
