@@ -11,7 +11,7 @@ function loadMenu(activo) {
     })
 }
 function loadpage(pagina) {
-    $('section .load').load(`./pages/${pagina}.html`).fadeIn(400);
+    $('section .load').load(`./pages/${pagina}.html?v=2`).fadeIn(400);
 }
 function loadFooter(){
     $('#footer').load(`./includes/footer.html`)

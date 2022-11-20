@@ -22,7 +22,8 @@
         "titulo": "Proyects",
         "galeria": "Gallery",
         "detalleApp1": "A Tu Orden MX is an app of digital menus, the restaurant registers and generates a digital menu and QR code. this can be plublished",
-        "detalleApp2": "Chesflix is an Web App of user managment that organizes costumer payment, the expired customer is notified by WhatsApp."
+        "detalleApp2": "Chesflix is an Web App of user managment that organizes costumer payment, the expired customer is notified by WhatsApp.",
+        "detalleApp3": "This system manages books in the library, as well as allows you to borrow books and keep track of them."
     },
     "contact":{
         "titulo": "Contact",

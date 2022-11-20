@@ -1,0 +1,61 @@
+<div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3" id="biblioteca">
+    <div class="card">
+        <div class="cover">
+            <img src="./assets/img/galeria/biblioteca_1.png" alt="">
+        </div>
+        <div class="body txt-center mt-1">
+            <span class="titulo">Biblioteca Syst.</span>
+            <p data-section="proyect" data-value="detalleApp3">
+                Este sistema gestiona libros que se encuentran en la biblioteca, al igual que permite hacer prestamos de libros y llevar el control.
+            </p>
+            <p class="tags">
+                <span>#Laravel</span>
+                <span>#API</span>
+                <span>#Bootstrap</span>
+                <span>#JQuery</span>
+                <span>#JavaScript</span>
+            </p>
+        </div>
+        <div class="buttons pb-2">
+            <a href="#" class="btn open-galeria">
+                <i class="fa-light fa-images me-1"></i>
+                <span data-section="proyect" data-value="galeria">Galeria</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function open_biblioteca() {
+        const galeria_biblioteca = Fancybox.show([
+            {
+                src: "./assets/img/galeria/biblioteca_1.png",
+                type: "image",
+            },
+            {
+                src: "./assets/img/galeria/biblioteca_2.png",
+                type: "image",
+            },
+            {
+                src: "./assets/img/galeria/biblioteca_3.png",
+                type: "image",
+            },
+            {
+                src: "./assets/img/galeria/biblioteca_4.png",
+                type: "image",
+            },
+            {
+                src: "./assets/img/galeria/biblioteca_5.gif",
+                type: "image",
+            }
+        ]);
+    }
+    $('#biblioteca .open-galeria').on('click', function (e) {
+        e.preventDefault();
+        open_biblioteca();
+    })
+    $('#biblioteca .cover').on('click', function () {
+        open_biblioteca();
+    })
+</script>
+<script src="./assets/js/changelang.js"></script>

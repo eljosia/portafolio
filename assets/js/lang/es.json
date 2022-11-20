@@ -22,7 +22,9 @@
         "titulo": "Proyectos",
         "galeria": "Galeria",
         "detalleApp1": "A Tu Orden MX es una aplicación de menú digital, el restaurant registra su menú y genera un código QR con su menú interactivo digital. Este lo puede publicar.",
-        "detalleApp2": "Chesflix es un sistema de gestión de usuarios encargado de organizar el pago de cada cliente, el cliente vencido se le notifica por WhatsApp automáticamente."
+        "detalleApp2": "Chesflix es un sistema de gestión de usuarios encargado de organizar el pago de cada cliente, el cliente vencido se le notifica por WhatsApp automáticamente.",
+        "detalleApp3": "Este sistema gestiona libros que se encuentran en la biblioteca, al igual que permite hacer prestamos de libros y llevar el control."
+        
     },
     "contact":{
         "titulo": "Contacto",
