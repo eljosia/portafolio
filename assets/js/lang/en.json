@@ -1,39 +1,39 @@
 {
     "home": {
-        "area": "Web Developer",
-        "saludo": "¡Hello!",
-        "presentacion": "I'm a Web Front/Back End Developer, specialized in the area of Web and Mobile application development. Student of ING. en Gestión y Desarrollo de Software."
+        "area": "Full Stack Developer",
+        "saludo": "Hello!",
+        "presentacion": "💻 I am a Full Stack Developer with experience in web and mobile application development, specializing in Laravel, Node.js, and Python. I have expertise in microservices architecture, API development, WebSockets, and scalable cloud systems."
     },
     "menu": {
         "inicio": "Home",
-        "acercade": "About me",
-        "proyectos": "Proyects",
+        "acercade": "About Me",
+        "proyectos": "Projects",
         "contacto": "Contact"
     },
     "about": {
         "titulo": "About Me",
-        "info": "I am 23 years old and I am in my TENTH semester of ING. en DESARROLLO Y GESTIÓN DE SOFTWARE. I develop web and mobile applications. <br> I have developed personal projects, in most of them, I am in charge of the design part, the client side (Front-End) and the application logic or server side (Back-End).",
+        "info": "I am currently 25 years old and a Software Development Engineer. I specialize in web and mobile application development, covering both Front-End and Back-End. I have developed multiple projects, handling user interface design and server logic, creating functional and scalable solutions.",
         "skill": "My Skills.",
-        "frontend": "Client side(Front-End)",
-        "backend": "Server side(Back-End)",
+        "frontend": "User Side (Front-End)",
+        "backend": "Server Side (Back-End)",
         "framlib": "Frameworks and Libraries"
     },
     "proyect": {
-        "titulo": "Proyects",
+        "titulo": "Projects",
         "galeria": "Gallery",
-        "detalleApp1": "A Tu Orden MX is an app of digital menus, the restaurant registers and generates a digital menu and QR code. this can be plublished",
-        "detalleApp2": "Chesflix is an Web App of user managment that organizes costumer payment, the expired customer is notified by WhatsApp.",
-        "detalleApp3": "This system manages books in the library, as well as allows you to borrow books and keep track of them."
+        "detalleApp1": "QIKMenu MX is a cloud-based POS application designed to optimize restaurant management.",
+        "detalleApp2": "Chesflix is a user management system responsible for organizing each client's payment. Expired clients are automatically notified via WhatsApp.",
+        "detalleApp3": "This system manages books available in the library and allows book loans and control tracking."
     },
-    "contact":{
+    "contact": {
         "titulo": "Contact",
         "subtitulo": "Send me a message",
-        "infoForm": "Fields marked with an (*) are required.",
+        "infoForm": "Fields marked with (*) are required.",
         "btnSend": "Send",
-        "moreInfo": "You can also contact me in the following ways:"
+        "moreInfo": "You can contact me through the following methods:"
     },
-    "contactInputs":{
-        "name-email":"<input type='text' class='input-form me-1' placeholder='Name*' id='nombre' required><input type='email' class='input-form ms-1' placeholder='Email*' id='email' required>",
+    "contactInputs": {
+        "name-email": "<input type='text' class='input-form me-1' placeholder='Name*' id='nombre' required><input type='email' class='input-form ms-1' placeholder='Email*' id='email' required>",
         "asunto": "<input type='text' class='input-form' placeholder='Subject*' id='asunto' required>",
         "textarea": "<textarea id='mensaje' rows='5' class='input-form' placeholder='Message*' required></textarea>"
     }

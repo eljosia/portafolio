@@ -1,0 +1,67 @@
+<div class="col-12 col-sm-6 col-lg-4 col-xl-3" id="qikmenu">
+    <div class="card">
+        <div class="cover">
+            <img src="./assets/img/galeria/qikmenu_1.png" alt="">
+        </div>
+        <div class="body txt-center mt-1">
+            <span class="titulo">QikMenu MX</span>
+            <p data-section="proyect" data-value="detalleApp1">
+                QIKMenu MX es una aplicación POS en la nube diseñada para optimizar la gestión de restaurantes.
+            </p>
+            <p class="tags">
+                <span>#Laravel</span>
+                <span>#NodeJS</span>
+                <span>#Python</span>
+                <span>#Bootstrap</span>
+                <span>#JQuery</span>
+                <span>#JavaScript</span>
+            </p>
+        </div>
+        <div class="buttons mb-2">
+            <a href="https://demo.qikmenu.mx" id="btnabrir" class="btn">
+                <i class="fa-light fa-browser me-1"></i>
+                <span>Visitar</span>
+            </a>
+            <a href="#" class="btn open-galeria">
+                <i class="fa-light fa-images me-1"></i>
+                <span data-section="proyect" data-value="galeria">Galeria</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function open_qikmenu() {
+        const galeria_qikmenu = Fancybox.show([
+            {
+                src: "./assets/img/galeria/qikmenu_1.png",
+                type: "image",
+            },
+            {
+                src: "./assets/img/galeria/qikmenu_2.png",
+                type: "image",
+            },
+            {
+                src: "./assets/img/galeria/qikmenu_3.png",
+                type: "image",
+            },
+            {
+                src: "./assets/img/galeria/qikmenu_4.png",
+                type: "image",
+            },
+            {
+                src: "./assets/img/galeria/qikmenu_5.png",
+                type: "image",
+            }
+        ]);
+    }
+    $('#qikmenu .open-galeria').on('click', function (e) {
+        e.preventDefault();
+        open_qikmenu();
+    })
+    $('#qikmenu .cover').on('click', function () {
+        open_qikmenu();
+    })
+</script>
+<script src="./assets/js/changelang.js"></script>
