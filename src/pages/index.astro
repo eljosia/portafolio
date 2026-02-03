@@ -1,17 +1,484 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import siteData from "../data/site.json";
+import sinImagen from "../assets/sin-imagen.png";
+import wsIcon from "../assets/whatsapp.png";
+import emailIcon from "../assets/email.png";
 
+const { home, about, skills, education, projects, contact, experience } =
+	siteData;
+const urls = siteData.urls as any;
+
+// Calculate total projects and years of experience
+const totalProjects = projects?.data?.length || 0;
+const startDates =
+	experience?.data?.map((job) => new Date(job.startDate).getTime()) || [];
+const earliestStart = Math.min(...startDates);
+const currentYear = new Date().getFullYear();
+const startYear = new Date(earliestStart).getFullYear();
+const yearsExperience = currentYear - startYear;
+
+const msgWs =
+	"¡Hola! estuve viendo tu portafolio y me gustaría ponerme en contacto contigo :)";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title={`${home.title} | ${home.subtitle}`}>
+	<main
+		class="bg-[#0a0a0b] text-slate-300 selection:bg-blue-500/30 font-sans"
+	>
+		<section
+			id="home"
+			class="relative min-h-[90vh] flex flex-col justify-center px-6 max-w-6xl mx-auto"
+		>
+			<div
+				class="absolute top-20 right-0 w-72 h-72 bg-blue-600/10 blur-[120px] rounded-full"
+			>
+			</div>
+
+			<div class="relative z-10 space-y-6">
+				<h1
+					class="text-5xl md:text-8xl font-bold text-white tracking-tight"
+				>
+					{home.title}
+				</h1>
+				<p
+					class="text-xl md:text-2xl text-slate-400 font-light max-w-2xl leading-relaxed"
+				>
+					{home.subtitle}
+				</p>
+
+				<div class="pt-10 flex flex-wrap gap-6 items-center">
+					<div class="flex gap-5 ml-2">
+						{
+							urls?.url &&
+								urls.url.map((link: any) => (
+									<a
+										href={link?.url}
+										target="_blank"
+										class="text-slate-500 hover:text-white transition-colors"
+									>
+										<img
+											src={link?.icon}
+											alt={link.name}
+											class="w-6 h-6 invert opacity-70 hover:opacity-100"
+										/>
+									</a>
+								))
+						}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="max-w-6xl mx-auto py-24 px-6">
+			<div
+				class="bg-neutral-900/50 border border-white/5 rounded-3xl p-8 md:p-12 backdrop-blur-sm"
+			>
+				<div class="grid md:grid-cols-3 gap-12">
+					<div class="md:col-span-2 space-y-6">
+						<h2
+							class="text-xs font-black uppercase tracking-[0.3em] text-blue-500"
+						>
+							Perfil Profesional
+						</h2>
+						<p
+							class="text-lg text-slate-300 leading-relaxed whitespace-pre-line"
+						>
+							{about.description}
+						</p>
+					</div>
+					<div
+						class="space-y-8 border-l border-white/5 pl-8 hidden md:block"
+					>
+						<div>
+							<p class="text-3xl font-bold text-white">
+								{yearsExperience}+
+							</p>
+							<p
+								class="text-xs text-slate-500 uppercase tracking-widest"
+							>
+								Años de experiencia
+							</p>
+						</div>
+						<div>
+							<p class="text-3xl font-bold text-white">
+								{totalProjects}+
+							</p>
+							<p
+								class="text-xs text-slate-500 uppercase tracking-widest"
+							>
+								Proyectos reales
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="experience"
+			class="max-w-6xl mx-auto py-32 px-6 border-t border-white/5"
+		>
+			<div class="grid md:grid-cols-4 gap-12">
+				<div class="md:col-span-1">
+					<h2
+						class="text-[10px] font-black uppercase tracking-[0.5em] text-blue-500 sticky top-32"
+					>
+						Experiencia
+					</h2>
+				</div>
+
+				<div class="md:col-span-3 space-y-20">
+					{
+						experience?.data.map((job: any) => (
+							<div class="relative group">
+								<div class="flex flex-col md:flex-row md:justify-between mb-4">
+									<div>
+										<h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+											{job.role}
+										</h3>
+										<p class="text-blue-500/80 font-medium uppercase tracking-widest text-xs mt-1">
+											{job.company}
+										</p>
+									</div>
+									<span class="text-slate-500 tabular-nums text-sm mt-2 md:mt-0 font-light">
+										{new Date(job.startDate).getFullYear()}{" "}
+										—{" "}
+										{job.endDate
+											? new Date(
+													job.endDate,
+												).getFullYear()
+											: "Actualidad"}
+									</span>
+								</div>
+								<p class="text-slate-400 leading-relaxed max-w-2xl font-light italic">
+									{job.description}
+								</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section id="skills" class="max-w-6xl mx-auto py-32 px-6">
+			<h2 class="text-3xl font-bold text-white mb-16 text-center">
+				Stack Tecnológico
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				{
+					skills?.data &&
+						skills.data.map((group: any) => (
+							<div class="bg-neutral-900/30 border border-white/5 p-8 rounded-2xl hover:bg-neutral-900/50 transition-colors">
+								<h3 class="text-blue-400 font-bold mb-8 text-sm uppercase tracking-widest">
+									{group.category}
+								</h3>
+								<div class="flex flex-wrap gap-4">
+									{group.skills?.map((item: any) => (
+										<div class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-lg border border-white/5 group hover:border-blue-500/50 transition-colors">
+											<img
+												src={item.icon}
+												alt={item.name}
+												class="w-4 h-4 object-contain opacity-70 group-hover:opacity-100"
+											/>
+											<span class="text-xs font-medium">
+												{item.name}
+											</span>
+										</div>
+									))}
+								</div>
+							</div>
+						))
+				}
+			</div>
+		</section>
+
+		<section id="projects" class="max-w-7xl mx-auto py-32 px-6">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				{
+					projects?.data.map((project: any, projectIndex: number) => (
+						<div class="group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden flex flex-col">
+							<div
+								class="relative aspect-video overflow-hidden cursor-zoom-in bg-neutral-900"
+								onclick={`openModal('${project.title}', ${JSON.stringify(project.gallery)})`}
+							>
+								<img
+									src={project.gallery?.[0] || sinImagen.src}
+									alt={project.title}
+									class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+								/>
+								{project.gallery?.length > 1 && (
+									<div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-md px-2 py-1 rounded-md text-[10px] text-white font-bold">
+										+{project.gallery.length - 1} fotos
+									</div>
+								)}
+							</div>
+
+							<div class="p-6 space-y-4">
+								<h3 class="text-xl font-bold text-white italic">
+									{project.title}
+								</h3>
+
+								<div class="flex flex-wrap gap-2 mb-6">
+									{project.techStack?.map(
+										(techName: string) => {
+											const allSkills =
+												skills.data.flatMap(
+													(g) => g.skills,
+												);
+											const skillInfo = allSkills.find(
+												(s) => s.name === techName,
+											);
+
+											return (
+												<div class="flex items-center gap-1 bg-white/5 border border-white/10 px-2 py-1 rounded-md">
+													{skillInfo?.icon && (
+														<img
+															src={skillInfo.icon}
+															class="w-3 h-3 invert opacity-70"
+														/>
+													)}
+													<span class="text-[9px] uppercase font-bold text-slate-400">
+														{techName}
+													</span>
+												</div>
+											);
+										},
+									)}
+								</div>
+
+								<div class="flex gap-4">
+									{project.demoUrl && (
+										<a
+											href={project.demoUrl}
+											class="btn btn-sm btn-primary text-[10px] font-bold uppercase tracking-widest text-blue-500"
+										>
+											Live
+										</a>
+									)}
+									{project.gitHubUrl && (
+										<a
+											href={project.gitHubUrl}
+											class="btn btn-sm btn-secondary text-[10px] font-bold uppercase tracking-widest text-gray-400"
+										>
+											GitHub
+										</a>
+									)}
+								</div>
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</section>
+
+		<div
+			id="lightbox"
+			class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl hidden flex-col justify-center items-center p-4 md:p-10"
+		>
+			<button
+				onclick="closeModal()"
+				class="absolute top-8 right-8 text-white hover:text-blue-500 transition-colors"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="w-10 h-10"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+						d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+
+			<div class="max-w-5xl w-full flex flex-col items-center">
+				<img
+					id="modal-img"
+					src=""
+					class="max-h-[70vh] w-auto object-contain rounded-lg shadow-2xl shadow-blue-500/10"
+				/>
+				<h3
+					id="modal-title"
+					class="text-white text-2xl font-light italic mt-8"
+				>
+				</h3>
+
+				<div
+					id="modal-thumbnails"
+					class="flex gap-4 mt-6 overflow-x-auto pb-4 max-w-full"
+				>
+				</div>
+			</div>
+		</div>
+
+		<script is:inline>
+			function openModal(title, images) {
+				const modal = document.getElementById("lightbox");
+				const modalImg = document.getElementById("modal-img");
+				const modalTitle = document.getElementById("modal-title");
+				const thumbContainer =
+					document.getElementById("modal-thumbnails");
+
+				modalTitle.innerText = title;
+				modalImg.src = images[0];
+				modal.classList.remove("hidden");
+				modal.classList.add("flex");
+
+				thumbContainer.innerHTML = "";
+				images.forEach((img) => {
+					const thumb = document.createElement("img");
+					thumb.src = img;
+					thumb.className =
+						"w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all opacity-50 hover:opacity-100";
+					thumb.onclick = () => {
+						modalImg.src = img;
+					};
+					thumbContainer.appendChild(thumb);
+				});
+			}
+
+			function closeModal() {
+				const modal = document.getElementById("lightbox");
+				modal.classList.add("hidden");
+				modal.classList.remove("flex");
+			}
+
+			// Cerrar con la tecla ESC
+			document.addEventListener("keydown", (e) => {
+				if (e.key === "Escape") closeModal();
+			});
+		</script>
+
+		<section
+			id="education"
+			class="max-w-6xl mx-auto py-32 px-6 border-t border-white/5"
+		>
+			<div class="grid md:grid-cols-3 gap-12">
+				<h2 class="text-3xl font-bold text-white">Educación</h2>
+				<div class="md:col-span-2 space-y-12">
+					{
+						education?.data.map((edu: any) => (
+							<div class="relative pl-8 border-l border-blue-600/30">
+								<div class="absolute w-3 h-3 bg-blue-600 rounded-full -left-[6.5px] top-2 shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
+								<p class="text-xs font-bold text-blue-500 mb-2">
+									{new Date(edu.startDate).getFullYear()} —{" "}
+									{edu?.endDate
+										? new Date(edu.endDate).getFullYear()
+										: "Presente"}
+								</p>
+								<h3 class="text-xl font-bold text-white">
+									{edu?.degree}
+								</h3>
+								<p class="text-slate-400">{edu?.institution}</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<footer
+			class="relative mt-20 border-t border-white/5 bg-[#050505] overflow-hidden"
+		>
+			<div
+				class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
+			>
+			</div>
+
+			<div class="max-w-6xl mx-auto py-24 px-6">
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+				>
+					<div class="space-y-6">
+						<h2
+							class="text-4xl md:text-5xl font-bold text-white tracking-tighter leading-none"
+						>
+							¿Hablamos sobre tu <span
+								class="text-blue-500 italic"
+								>próximo proyecto</span
+							>?
+						</h2>
+						<p class="text-slate-400 text-lg font-light max-w-md">
+							Estoy disponible para nuevas oportunidades y retos
+							técnicos. Conectemos.
+						</p>
+					</div>
+
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+						<a
+							href={`https://wa.me/521${contact.whatsapp}?text=${encodeURIComponent(msgWs)}`}
+							target="_blank"
+							class="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-500"
+						>
+							<div class="flex flex-col gap-4">
+								<img
+									src={wsIcon.src}
+									class="w-6 h-6 opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all"
+								/>
+								<div>
+									<p
+										class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1"
+									>
+										WhatsApp
+									</p>
+									<p class="text-white font-medium">
+										{contact.whatsapp}
+									</p>
+								</div>
+							</div>
+						</a>
+
+						<a
+							href={`mailto:${contact.email}`}
+							target="_blank"
+							class="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-500"
+						>
+							<div class="flex flex-col gap-4">
+								<img
+									src={emailIcon.src}
+									class="w-6 h-6 opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all"
+								/>
+								<div>
+									<p
+										class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1"
+									>
+										Email
+									</p>
+									<p class="text-white font-medium truncate">
+										{contact.email}
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div
+					class="mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6"
+				>
+					<div
+						class="text-[10px] text-slate-600 uppercase tracking-[0.4em] font-bold"
+					>
+						© {currentYear}
+						{home.title}
+					</div>
+
+
+					<div class="flex items-center gap-2">
+						<span
+							class="w-2 h-2 rounded-full bg-green-500 animate-pulse"
+						></span>
+						<span
+							class="text-[10px] uppercase tracking-widest text-slate-600 font-bold"
+							>Status: Online</span
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</main>
+</Layout>

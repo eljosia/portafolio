@@ -1,0 +1,229 @@
+{
+  "home": {
+    "title": "José Ángel Rodriguez Corona",
+    "subtitle": "Full Stack Developer"
+  },
+  "about": {
+    "description": "Desarrollador Full Stack especializado en la arquitectura y despliegue de soluciones empresariales de alto impacto. Con una sólida base en el ecosistema Laravel, Node.js y PHP, combino la ingeniería de software con una visión integral de infraestructura, redes y servidores. Mi enfoque se centra en transformar necesidades operativas en sistemas robustos (ERP/POS) que optimizan procesos reales, garantizando escalabilidad, seguridad y alta disponibilidad en entornos de producción."
+  },
+  "skills": {
+    "data": [
+      {
+        "category": "Backend",
+        "skills": [
+          {
+            "name": "Laravel",
+            "icon": "/uploads/icons/laravel.svg"
+          },
+          {
+            "name": "PHP",
+            "icon": "/uploads/icons/php.svg"
+          },
+          {
+            "name": "NodeJS",
+            "icon": "/uploads/icons/nodo-js.png"
+          },
+          {
+            "name": "Python",
+            "icon": "/uploads/icons/piton.png"
+          },
+          {
+            "name": "MySQL",
+            "icon": "/uploads/icons/base-de-datos-mysql.png"
+          }
+        ]
+      },
+      {
+        "category": "Frontend Web",
+        "skills": [
+          {
+            "name": "HTML5",
+            "icon": "/uploads/icons/html5.png"
+          },
+          {
+            "name": "CSS3",
+            "icon": "/uploads/icons/css3.png"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "/uploads/icons/js.png"
+          },
+          {
+            "name": "React",
+            "icon": "/uploads/icons/React-icon.png"
+          },
+          {
+            "name": "JQuery",
+            "icon": "/uploads/icons/jquery.svg"
+          },
+          {
+            "name": "Metronic",
+            "icon": "/uploads/icons/metronic.png"
+          }
+        ]
+      },
+      {
+        "category": "Infraestructura",
+        "skills": [
+          {
+            "name": "Linux",
+            "icon": "/uploads/icons/linux.png"
+          },
+          {
+            "name": "Windows",
+            "icon": "/uploads/icons/ventanas.png"
+          },
+          {
+            "name": "Servidores",
+            "icon": "/uploads/icons/centro-de-datos.png"
+          },
+          {
+            "name": "Redes",
+            "icon": "/uploads/icons/redes-de-ordenadores.png"
+          },
+          {
+            "name": "CCTV",
+            "icon": "/uploads/icons/camara-de-cctv.png"
+          }
+        ]
+      },
+      {
+        "category": "Frontend Mobile",
+        "skills": [
+          {
+            "name": "Flutter",
+            "icon": "/uploads/icons/flutter_logo.svg"
+          }
+        ]
+      },
+      {
+        "category": "Control de Versiones",
+        "skills": [
+          {
+            "name": "Git",
+            "icon": "/uploads/icons/git.png"
+          },
+          {
+            "name": "GitHub",
+            "icon": "/uploads/icons/github.png"
+          },
+          {
+            "name": "BitBucket",
+            "icon": "/uploads/icons/bitbucket.png"
+          }
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "data": [
+      {
+        "company": "Freelancer",
+        "role": "Desarrollador Full Stack Independiente",
+        "description": "Desarrollo de aplicaciones web y móviles utilizando Laravel y Flutter, enfocadas en soluciones a la medida para negocios y sistemas administrativos. Integración de APIs y servicios externos, así como la implementación de sistemas de impresión POS y automatización de procesos operativos. Participación en todas las etapas del desarrollo, desde el análisis de requerimientos hasta el despliegue y soporte.",
+        "startDate": "2024-08-01T15:20:54.814Z"
+      },
+      {
+        "company": "Instituto Electoral del Estado de Sinaloa",
+        "role": "Coordinador de Sistemas",
+        "description": "Responsable de la gestión y supervisión de personal técnico, así como de la administración de infraestructura tecnológica. Manejo de redes, sistemas de videovigilancia (CCTV) y atención a incidencias técnicas, garantizando la continuidad operativa y el correcto funcionamiento de los sistemas durante procesos críticos.",
+        "startDate": "2024-03-01T15:18:30.764Z",
+        "endDate": "2024-07-31T15:18:44.601Z"
+      },
+      {
+        "company": "Innovación y Tecnología Teknik",
+        "role": "Desarrollador Full Stack Laravel",
+        "description": "Desarrollo y mantenimiento de sistemas ERP basados en Laravel. Implementación de módulos clave como facturación, control de inventarios y CRM. Optimización del frontend y backend, mejorando rendimiento, estabilidad y experiencia de usuario. Colaboración en el análisis, diseño e implementación de nuevas funcionalidades.",
+        "startDate": "2022-12-16T15:17:00.568Z",
+        "endDate": "2024-03-31T15:17:13.397Z"
+      }
+    ]
+  },
+  "education": {
+    "data": [
+      {
+        "degree": "Ingeniería en Gestión y Desarrollo de Software",
+        "institution": "Universidad Tecnológica de Escuinapa",
+        "startDate": "2021-09-02T12:09:09.808Z",
+        "endDate": "2023-06-01T00:00:00.000Z"
+      },
+      {
+        "degree": "Técnico en Tecnologías de la Información",
+        "institution": "Universidad Tecnológica de Escuinapa",
+        "startDate": "2019-09-02T12:59:41.187Z",
+        "endDate": "2021-08-31T23:00:00.000Z"
+      }
+    ]
+  },
+  "projects": {
+    "data": [
+      {
+        "title": "LyricMex",
+        "gallery": [
+          "/uploads/projects/LyricMex.jpg",
+          "/uploads/projects/1.PNG",
+          "/uploads/projects/2.PNG",
+          "/uploads/projects/3.PNG"
+        ],
+        "gitHubUrl": "#",
+        "demoUrl": "https://play.google.com/store/apps/details?id=com.josiapp.lyricmex",
+        "techStack": [
+          "Flutter",
+          "Git",
+          "Python"
+        ]
+      },
+      {
+        "title": "QikPos App",
+        "gallery": [
+          "/uploads/projects/qikposApp 2026-02-03 091130.png",
+          "/uploads/projects/qikposApp Screenshot 2026-02-03 091351.png"
+        ],
+        "techStack": [
+          "Laravel",
+          "NodeJS",
+          "MySQL",
+          "Linux",
+          "Flutter",
+          "Git"
+        ]
+      },
+      {
+        "title": " Biblioteca Syst",
+        "gallery": [
+          "/uploads/projects/Biblioteca-02-03-2026_09_05_AM.png",
+          "/uploads/projects/Biblioteca-02-03-2026_09_15_AM.png"
+        ],
+        "demoUrl": "https://biblioteca.utescuinapa.edu.mx/",
+        "techStack": [
+          "Laravel",
+          "MySQL",
+          "JQuery",
+          "Metronic",
+          "Linux",
+          "Git"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "email": "contacto@joseangelrc.com",
+    "whatsapp": "6959519345"
+  },
+  "urls": {
+    "url": [
+      {
+        "name": "GitHub",
+        "icon": "/uploads/icons/github.png",
+        "label": "GitHub",
+        "url": "https://github.com/eljosia"
+      },
+      {
+        "name": "Linkedin",
+        "icon": "/uploads/icons/linkedin.png",
+        "label": "Linkedin",
+        "url": "https://www.linkedin.com/in/joseangelrc/"
+      }
+    ]
+  }
+}
